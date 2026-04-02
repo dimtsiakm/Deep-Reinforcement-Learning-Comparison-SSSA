@@ -64,7 +64,7 @@ ALGORITHMS = {
 ON_POLICY = {"PPO"}
 
 # ---------------------------------------------------------------------------
-# Hyperparameters — RL-Zoo tuned defaults for HalfCheetah-v5
+# Hyperparameters — RL-Zoo tuned defaults for HalfCheetah-v4
 # Source: https://github.com/DLR-RM/rl-baselines3-zoo
 # ---------------------------------------------------------------------------
 DEFAULT_HYPERPARAMS: dict[str, dict] = {
@@ -111,9 +111,7 @@ DEFAULT_HYPERPARAMS: dict[str, dict] = {
     ),
 }
 
-# ---------------------------------------------------------------------------
-# Environment factory
-# ---------------------------------------------------------------------------
+
 def make_env(env_id: str, max_episode_steps: int = 1000):
     """Return a callable that builds a monitored, time-limited environment."""
 
@@ -247,9 +245,7 @@ def record_video(
     env.close()
     print(f"  [video] Saved to {video_dir}/")
 
-# ---------------------------------------------------------------------------
-# Train + evaluate one (algo, seed) combination
-# ---------------------------------------------------------------------------
+
 def train_and_evaluate(
     algo_name: str,
     env_id: str,
@@ -321,9 +317,6 @@ def train_and_evaluate(
     return metrics
 
 
-# ---------------------------------------------------------------------------
-# Aggregation
-# ---------------------------------------------------------------------------
 def aggregate_results(all_results: List[Dict]):
     results_without_curves = []
     for r in all_results:
@@ -477,9 +470,6 @@ def plot_results(
     plt.close()
 
 
-# ---------------------------------------------------------------------------
-# Config persistence
-# ---------------------------------------------------------------------------
 def save_config(args, out_dir: Path):
     config = {
         "env": args.env,
