@@ -1,0 +1,20 @@
+Statistical Significance Tests — Mann-Whitney U (non-parametric)
+NOTE: With only 3 seeds per algorithm the test has low power.
+Results should be treated as indicative, not conclusive.
+=================================================================
+
+PPO vs SAC:
+  U-statistic : 0.0000
+  p-value     : 0.1000
+  Result      : No significant difference (p >= 0.05)
+
+PPO vs TD3:
+  U-statistic : 0.0000
+  p-value     : 0.1000
+  Result      : No significant difference (p >= 0.05)
+
+SAC vs TD3:
+  U-statistic : 9.0000
+  p-value     : 0.1000
+  Result      : No significant difference (p >= 0.05)
+
