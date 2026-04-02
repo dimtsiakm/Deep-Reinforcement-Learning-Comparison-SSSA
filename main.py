@@ -505,9 +505,9 @@ def parse_args():
         description="Comprehensive comparison of PPO, SAC, TD3 on MuJoCo tasks."
     )
     parser.add_argument("--env", type=str, default="HalfCheetah-v5")
-    parser.add_argument("--timesteps", type=int, default=100_000)
+    parser.add_argument("--timesteps", type=int, default=1_000_000)
     parser.add_argument("--eval_episodes", type=int, default=10)
-    parser.add_argument("--seeds", type=int, nargs="+", default=[42])#[42, 123, 456])
+    parser.add_argument("--seeds", type=int, nargs="+", default=[42, 123, 456])
     parser.add_argument("--output", type=str, default="results")
     parser.add_argument(
         "--algos",
